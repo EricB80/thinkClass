@@ -18,7 +18,7 @@ after_tax = tax_value + meal
 tip_value = calc_value(meal, tip_rate)
 total_cost = (after_tax + tip_value)
 
-puts "the meal cost: " + force_currency(meal)
-puts "the tax value is: " + force_currency(tax_value)
-puts "the tip is: " + force_currency(tip_value)
-puts "the total cost is: " + force_currency(total_cost)
+puts "the meal cost: $" + force_currency(meal)
+puts "the tax value is: $" + force_currency(tax_value)
+puts "the tip is: $" + force_currency(tip_value)
+puts "the total cost is: $" + force_currency(total_cost)
