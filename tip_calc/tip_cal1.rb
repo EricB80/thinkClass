@@ -13,4 +13,3 @@ puts "the tip is: #{tip_value}"
 puts "the total cost is: #{total_cost}"
 
 puts "i hope this worked"
-print "this did work"
