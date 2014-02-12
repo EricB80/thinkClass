@@ -1,0 +1,9 @@
+<h1>this is the show page</h1>
+<div>
+  <h1><%= @articles.title %></h1>
+  <p>Published <%= @articles.created_at.strftime('%b %d, %Y') %></p>
+  <p>Filed under: <% @articles.categories.each do |category| %>
+    <%= category.name %>&nbsp;<% end %>
+  </p>
+  <div><%= @articles.content %></div>
+</div>
