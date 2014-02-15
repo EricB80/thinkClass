@@ -8,6 +8,12 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @article = Article.new
+  end
+  
+  
+
+  def create
     @article = Article.new(article_params)
     if @article.save
       redirect_to @article
@@ -15,13 +21,10 @@ class ArticlesController < ApplicationController
       render "new"
     end
   end
-  
+
   private
   def article_params
-    params.require(:article).permit(:title, :content, :categor_ids=>[])
+    params.require(:article).permit(:title, :content, :category_ids => [])
   end
-
-  def create
-  end
-
+  
 end
