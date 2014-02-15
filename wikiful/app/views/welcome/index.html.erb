@@ -1,2 +1,20 @@
 <h1>Welcome to Wikiful</h1>
-<p>This is a placeholder for our landing page. Eventually we'll put something cooler here!</p>
+<div id='welcome'>
+<p>Wikiful is a class project for the Ruby on Rails course I am taking from <a href='http://www.thinkful.com' target='_blank'>
+  Thinkful.com</a> Listed below are the 5 most recent articles that have been published on this tool.</p>
+</div>
+
+<div id='recents'>
+  <ul id='recent_list'>
+    <% @recent_articles.each do |recent| %>
+    <ul class='article_props'>
+      <li class='article_name'><%= link_to recent.title, recent %></li>
+      <li class='publish_date'>Published: <%= recent.created_at.strftime('%b %d. %Y') %></li>
+      <li class='categories'><% recent.categories.each do |cat| %>
+        <%= cat.name %> &nbsp;
+        <%end %></li>
+      <li class='preview'><%= truncate(recent.content, length: 100)%> </li>
+    </ul>
+    <%end%>
+  </ul>
+</div>
