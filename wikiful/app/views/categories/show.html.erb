@@ -1,0 +1,8 @@
+<h1>Category: <%= @categories.name %></h1>
+<h2> There are <%= @categories.articles.count %> articles that use this category. </h2>
+<ul>
+  <% @categories.articles.each do |article| %>
+  <li><%= link_to article.title, article %> 
+    <span class='date'>Published: <%= article.created_at.strftime('%b %d. %Y') %></span>
+  </li>
+  <%end %>
