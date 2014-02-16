@@ -11,3 +11,37 @@
  *= require_self
  *= require_tree .
  */
+.span9{
+  padding: 10px;
+}
+ul{
+  text-decoration: none;
+}
+.article_props li{
+  text-decoration: none;
+}
+.article_props{
+  text-decoration: none;
+}
+#recent_list li{
+  text-decoration:none;
+}
+.article_name{
+  font-size: 20px;
+  line-height:20px
+  text-decoration: none;
+}
+.publish_date{
+  display:inline;
+  margin:0;
+  padding:0;
+  font-style:italic;
+  text-decoration: none;
+}
+.categories{
+  display:inline;
+  margin:0;
+  padding:0;
+  font-style:italic:
+  text-decoration: none;
+}

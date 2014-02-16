@@ -9,12 +9,12 @@
     <% @recent_articles.each do |recent| %>
     <ul class='article_props'>
       <li class='article_name'><%= link_to recent.title, recent %></li>
-      <li class='publish_date'>Published: <%= recent.created_at.strftime('%b %d. %Y') %></li>
-      <li class='categories'><% recent.categories.each do |cat| %>
+      <li class='publish_date'>Published: <%= recent.created_at.strftime('%b %d. %Y') %> | </li>
+      <li class='categories'>Categories:<% recent.categories.each do |cat| %>
         <%= cat.name %> &nbsp;
         <%end %></li>
-      <li class='preview'><%= truncate(recent.content, length: 100)%> </li>
-    </ul>
+      <li class='preview'>Sample: <%= truncate(recent.content, length: 100)%> </li>
+    </ul><br />
     <%end%>
   </ul>
 </div>
