@@ -1,11 +1,11 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.all.order(name: :asc)
+    @categories = Category.includes(:articles).order(name: :asc)
   end
   
   
   def show
-    @categories = Category.find(params[:id])
+    @categories = Category.where(id: params[:id]).load
   end
   
 end
