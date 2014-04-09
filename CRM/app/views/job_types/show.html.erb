@@ -1,0 +1,8 @@
+<%= form_for @job_type do |f| %>
+<ul>
+<% @job_types.each do |type| %>
+  <li><%= check_box_tag(type.id) %><%= label_tag type.description %></li>
+<% end %>
+</ul>
+<%= f.submit %>
+<% end %>

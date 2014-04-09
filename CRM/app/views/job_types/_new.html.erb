@@ -1,0 +1,17 @@
+<div class = 'add_new'>
+<%= form_for @job_type do |f| %>
+  <% if @job_type.errors.any? %>
+  <div class= 'i_am_error'>
+    <h2>Invalid Job Type</h2>
+    <ul>
+      <% @job_type.errors.full_messages.each do |m| %>
+      <li><%= m %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+<%= f.label :description, 'Enter a new Job Type'%>
+<%= f.text_field :description %>
+<%= f.submit value='Create'%>
+<% end %>
+</div>

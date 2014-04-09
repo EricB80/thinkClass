@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ans_no: 1
+  ans_text: MyText
+
+two:
+  ans_no: 1
+  ans_text: MyText

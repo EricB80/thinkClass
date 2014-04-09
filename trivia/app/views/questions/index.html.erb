@@ -1,0 +1,17 @@
+<%= form_for @questions, url: questions_path do  |f| %>
+  <% if @question.errors.any? %>
+  <div class='i_am_error'>
+    <ul>
+      <% @question.erros.full_messages.each do |m| %>
+      <li><%= m %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  
+  <%= f.label :round, 'What Round is this question for?' %>
+  <%= f.text_field :round %><br />
+  <%= f.label :question, 'What is your question?' %>
+  <%= f.text_area :question %><br />
+  <%= f.submit value= 'Create Quiz!' %>
+  <% end %>

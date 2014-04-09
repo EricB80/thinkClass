@@ -1,0 +1,22 @@
+<h2>Create your Quiz here</h2>
+<div id='new_quiz'>
+  <%= form_for @quiz do |f| %>
+  <% if @quiz.errors.any? %>
+  <div class='i_am_error'>
+    <ul>
+      <% @quiz.errors.full_messages.each do |m| %>
+      <li><%= m %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  
+  <%= f.label :name, 'Quiz name:' %>
+  <%= f.text_field :name %><br />
+  <%= f.label :description, 'Enter a description, or some notes about this quiz' %>
+  <%= f.text_area :description %><br />
+  <%= f.label :no_rounds, 'How many rounds does this quiz have?' %>
+  <%= f.text_field :no_rounds, size: 3 %><br />
+  <%= f.submit value= 'Create Quiz!' %>
+  <% end %>
+</div>

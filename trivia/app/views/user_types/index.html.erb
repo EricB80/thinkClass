@@ -1,0 +1,24 @@
+<div id='type_list'>
+  <ul> 
+    <% @user_types.each do |t| %>
+    <li><%= t.description %></li>
+    <% end %>
+  </ul>
+
+<div class = 'add_new'>
+<%= form_for @user_type do |f| %>
+  <% if @user_type.errors.any? %>
+  <div class= 'i_am_error'>
+    <h2>Invalid User Type</h2>
+    <ul>
+      <% @user_type.errors.full_messages.each do |m| %>
+      <li><%= m %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+<%= f.label :description, 'Enter a new User Type'%>
+<%= f.text_field :description %>
+<%= f.submit value='Create'%>
+<% end %>
+</div>

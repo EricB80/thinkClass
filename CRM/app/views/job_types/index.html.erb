@@ -1,0 +1,10 @@
+<div id = 'type_list'>
+<h2>Job Types</h2>
+<ul>
+<% @job_types.each do |type| %>
+  <li><%= type.description %></li>
+<% end %>
+</ul>
+  <%= button_tag 'Manage Job Types', type: :button, id: 'manager'%>
+</div>  
+<%= render :partial=>'new' %>

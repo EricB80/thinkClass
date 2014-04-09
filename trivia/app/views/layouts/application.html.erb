@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trivia</title>
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE, NO-STORE">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id='wrapper'>
+  <div id="top_content">Top stuff here, like logos and stuff</div>
+  <div id="left_nav">
+    <ul id="navigation">
+      <li>View Events</li>
+      <li>My Team's Standings</li>
+      <li>My Settings</li>
+      <li><%= link_to "Quizzes", quizzes_path %></li>
+    </ul>
+    </div>
+    <div id="main_content">    
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>
